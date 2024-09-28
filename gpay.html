@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('bg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .centered-image {
+            max-width: 50%;
+            height: auto;
+            border: 5px solid #fff;
+            border-radius: 8px;
+        }
+        .payment-btn {
+            display: block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .payment-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="changeableImage" src="gpay.jpg" alt="Centered Image" class="centered-image">
+        <button id="invoice-btn" class="payment-btn">Click here to see invoice</button>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.getElementById('changeableImage').src = 'success.png';
+        }, 10000);
+
+        document.getElementById('invoice-btn').addEventListener('click', () => {
+            window.location.href = 'invoice.html';
+        });
+    </script>
+</body>
+</html>
